@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartMovingMobileApp.Views.HomePage"
+             xmlns:vm="clr-namespace:SmartMovingMobileApp.ViewModels"
+             Shell.NavBarIsVisible="True"
+             Title="Dashboard">
+
+    <ContentPage.BindingContext>
+        <vm:HomeViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+        <ScrollView>
+            <StackLayout Margin="0,20,0,20" VerticalOptions="Center" >
+                <Label Text="{Binding MostVisitedSection}"
+                HorizontalOptions="CenterAndExpand" Margin="10" />
+                <Image HeightRequest="100" WidthRequest="100" Margin="10" >
+                    <Image.Source>
+                        <UriImageSource Uri="{Binding MostVisitedSectionIcon}" />
+                    </Image.Source>
+                </Image>
+                <Label Text="{Binding DataModel.MostVisitedSection.AmountOfVisits}"
+                HorizontalOptions="CenterAndExpand"  Margin="0,0,0,20"/>
+
+                <Label Text="{Binding LessVisitedSection}"
+                HorizontalOptions="CenterAndExpand" Margin="10" />
+                <Image HeightRequest="100" WidthRequest="100" Margin="10" >
+                    <Image.Source>
+                        <UriImageSource Uri="{Binding LessVisitedSectionIcon}" />
+                    </Image.Source>
+                </Image>
+                <Label Text="{Binding DataModel.LessVisitedSection.AmountOfVisits}"
+                HorizontalOptions="CenterAndExpand"  Margin="0,0,0,20"/>
+                
+                <Label Text="{Binding PeopleAverage}"
+                HorizontalOptions="CenterAndExpand" Margin="10" />
+                <Image HeightRequest="100" WidthRequest="100" Margin="10" >
+                    <Image.Source>
+                        <UriImageSource Uri="{Binding PeopleAverageIcon}" />
+                    </Image.Source>
+                </Image>
+                <Label Text="{Binding TimeAverage}"
+                HorizontalOptions="CenterAndExpand" Margin="10" />
+                <Image HeightRequest="100" WidthRequest="100" Margin="10" >
+                    <Image.Source>
+                        <UriImageSource Uri="{Binding TimeAverageIcon}" />
+                    </Image.Source>
+                </Image>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
