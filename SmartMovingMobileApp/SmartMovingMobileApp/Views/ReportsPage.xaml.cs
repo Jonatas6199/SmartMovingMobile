@@ -32,6 +32,7 @@ namespace SmartMovingMobileApp.Views
         public async void GetReport()
         {
             //TODO: não tem como manter uma stream aberta, tem que salvar esse arquivo aí em algum lugar
+            //TODO: colocar uma lista de relatórios, e ele só vai poder abrir o relatório quando baixar, aí n tem o problema da stream
             Stream stream = await ReportsViewModel.GetReport();
             await Task.Delay(200);
             pdfViewerControl.Unload();
