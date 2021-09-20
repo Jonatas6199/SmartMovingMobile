@@ -31,8 +31,12 @@ namespace SmartMovingMobileApp.Views
         public async void GetReport()
         {
             Stream stream = await ReportsViewModel.GetReport();
+            await Task.Delay(200);
             pdfViewerControl.Unload();
+            await Task.Delay(200);
             await pdfViewerControl.LoadDocumentAsync(stream, cancellationTokenSource);
+            await Task.Delay(200);
+            stream.Dispose();
         }
     }
 }
