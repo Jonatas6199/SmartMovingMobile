@@ -6,8 +6,43 @@
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
     <ContentPage.Content>
         <StackLayout>
-            <chart:SfChart>
-                
+            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <chart:SfChart.BindingContext>
+                    <vm:ChartsViewModel/>
+                </chart:SfChart.BindingContext>
+
+                <chart:SfChart.Legend>
+                    <chart:ChartLegend />
+                </chart:SfChart.Legend>
+
+                <chart:SfChart.Title>
+                    <chart:ChartTitle Text="Visitas por Setor"/>
+                </chart:SfChart.Title>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis>
+                        <chart:CategoryAxis.Title>
+                            <chart:ChartAxisTitle Text="Setor"/>
+                        </chart:CategoryAxis.Title>
+                    </chart:CategoryAxis>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis>
+                        <chart:NumericalAxis.Title>
+                            <chart:ChartAxisTitle Text="Visitas"/>
+                        </chart:NumericalAxis.Title>
+                    </chart:NumericalAxis>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:SfChart.Series>
+                    <chart:ColumnSeries ItemsSource="{Binding ChartData}" Label="Visitas" XBindingPath="Name" YBindingPath="Amount" EnableTooltip="True">
+                        <chart:ColumnSeries.DataMarker>
+                            <chart:ChartDataMarker/>
+                        </chart:ColumnSeries.DataMarker>
+                    </chart:ColumnSeries>
+                </chart:SfChart.Series>
             </chart:SfChart>
         </StackLayout>
     </ContentPage.Content>

@@ -19,6 +19,7 @@ namespace SmartMovingMobileApp.Views
         private ReportsViewModel ReportsViewModel { get; set; }
         public ReportsPage()
         {
+            Title = "Relatórios";
             InitializeComponent();
             BindingContext = ReportsViewModel = new ReportsViewModel();
             cancellationTokenSource = new CancellationTokenSource();
@@ -30,6 +31,7 @@ namespace SmartMovingMobileApp.Views
         }
         public async void GetReport()
         {
+            //TODO: não tem como manter uma stream aberta, tem que salvar esse arquivo aí em algum lugar
             Stream stream = await ReportsViewModel.GetReport();
             await Task.Delay(200);
             pdfViewerControl.Unload();

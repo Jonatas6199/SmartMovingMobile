@@ -14,6 +14,7 @@ namespace SmartMovingMobileApp.Views
     {
         public ChartsPage()
         {
+            Title = "Gráficos";
             InitializeComponent();
         }
     }
