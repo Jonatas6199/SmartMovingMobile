@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SmartMovingMobileApp.Views.ReportsPage">
+             x:Class="SmartMovingMobileApp.Views.ReportsPage"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Exibir Pdf" Clicked="Button_Clicked">
+            </Button>
+            <syncfusion:SfPdfViewer x:Name="pdfViewerControl">
+                
+            </syncfusion:SfPdfViewer>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
