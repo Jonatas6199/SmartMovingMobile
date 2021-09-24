@@ -36,11 +36,13 @@ namespace SmartMovingMobileApp.Views
             ReportsItemViewModel = BindingContext as ReportsItemViewModel;
         }
 
+        // Volta para a página anterior
         private async void Button_Clicked(object sender, EventArgs e)
         {
             pdfViewerControl.Unload();
             await Shell.Current.GoToAsync("..");
         }
+        // Carrega o relatório no viewer
         private void LoadDocument()
         {
             LoadDocumentAsync();
@@ -64,6 +66,7 @@ namespace SmartMovingMobileApp.Views
             }
         }
 
+        // Compartilhar relatório (TO DO)
         private async void btnShare_Clicked(object sender, EventArgs e)
         {
             await ShareFile("text");
@@ -77,9 +80,9 @@ namespace SmartMovingMobileApp.Views
                 Title = $"Compartilhar {shareFile.FileName}"
             });
         }
-        //Gráfico de barras horizontal ou de pizza
-        //Total de visitas no período selecionado 
-        //Gráfico de linha do setor
-        //Filtro de data da home no topo
+        //Gráfico de barras horizontal ou de pizza (TO DO)
+        //Total de visitas no período selecionado  (TO DO)
+        //Gráfico de linha do setor (TO DO)
+        //Filtro de data da home no topo (TO DO)
     }
 }
