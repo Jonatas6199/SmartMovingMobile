@@ -14,7 +14,7 @@ namespace SmartMovingMobileApp
             Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
             Routing.RegisterRoute(nameof(ChartsPage), typeof(ChartsPage));
             Routing.RegisterRoute(nameof(ReportsPage), typeof(ReportsPage));
-
+            Routing.RegisterRoute(nameof(ReportsItemPage), typeof(ReportsItemPage));
         }
 
     }

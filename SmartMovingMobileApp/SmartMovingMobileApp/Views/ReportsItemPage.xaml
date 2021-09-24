@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SmartMovingMobileApp.Views.ReportsItemPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="{Binding Title}"
+              xmlns:vm="clr-namespace:SmartMovingMobileApp.ViewModels"
+              xmlns:syncfusion="clr-namespace:Syncfusion.SfPdfViewer.XForms;assembly=Syncfusion.SfPdfViewer.XForms">
+    <ContentPage.BindingContext>
+        <vm:ReportsItemViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid BackgroundColor="#097ade">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ImageButton BackgroundColor="#097ade" WidthRequest="50" HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" Source="back_icon.png" Clicked="Button_Clicked"/>
+                <ImageButton BackgroundColor="#097ade" WidthRequest="50" HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand" HeightRequest="50" Grid.Column="1" Source="share_icon.png" Clicked="btnShare_Clicked"/>
+            </Grid>
+            <syncfusion:SfPdfViewer x:Name="pdfViewerControl">
+            </syncfusion:SfPdfViewer>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
