@@ -4,46 +4,169 @@
              x:Class="SmartMovingMobileApp.Views.ChartsPage"
              xmlns:vm="clr-namespace:SmartMovingMobileApp.ViewModels"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
-    <ContentPage.Content>
-        <StackLayout>
-            <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <Grid>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <chart:SfChart Grid.Row="0" x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                <chart:SfChart.BindingContext>
-                    <vm:ChartsViewModel/>
-                </chart:SfChart.BindingContext>
+                    <chart:SfChart.BindingContext>
+                        <vm:ChartsViewModel/>
+                    </chart:SfChart.BindingContext>
 
-                <chart:SfChart.Legend>
-                    <chart:ChartLegend />
-                </chart:SfChart.Legend>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
 
-                <chart:SfChart.Title>
-                    <chart:ChartTitle Text="Visitas por Setor"/>
-                </chart:SfChart.Title>
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Visitas por Setor nos últimos 3 dias"/>
+                    </chart:SfChart.Title>
 
-                <chart:SfChart.PrimaryAxis>
-                    <chart:CategoryAxis>
-                        <chart:CategoryAxis.Title>
-                            <chart:ChartAxisTitle Text="Setor"/>
-                        </chart:CategoryAxis.Title>
-                    </chart:CategoryAxis>
-                </chart:SfChart.PrimaryAxis>
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Setor"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
 
-                <chart:SfChart.SecondaryAxis>
-                    <chart:NumericalAxis>
-                        <chart:NumericalAxis.Title>
-                            <chart:ChartAxisTitle Text="Visitas"/>
-                        </chart:NumericalAxis.Title>
-                    </chart:NumericalAxis>
-                </chart:SfChart.SecondaryAxis>
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Visitas"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
 
-                <chart:SfChart.Series>
-                    <chart:ColumnSeries ItemsSource="{Binding ChartData}" Label="Visitas" XBindingPath="Name" YBindingPath="Amount" EnableTooltip="True">
-                        <chart:ColumnSeries.DataMarker>
-                            <chart:ChartDataMarker/>
-                        </chart:ColumnSeries.DataMarker>
-                    </chart:ColumnSeries>
-                </chart:SfChart.Series>
-            </chart:SfChart>
-        </StackLayout>
-    </ContentPage.Content>
+                    <chart:SfChart.Series>
+                        <chart:PieSeries ItemsSource="{Binding SectorsVisitsChartData}" Label="Visitas" XBindingPath="Name" YBindingPath="Amount" EnableTooltip="True">
+                            <chart:PieSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:PieSeries.DataMarker>
+                        </chart:PieSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+
+                <chart:SfChart Grid.Row="1" x:Name="ChartSector1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                    <chart:SfChart.BindingContext>
+                        <vm:ChartsViewModel/>
+                    </chart:SfChart.BindingContext>
+
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
+
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Visitas aos Vegetais nos Últimos 3 dias"/>
+                    </chart:SfChart.Title>
+
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Setor"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
+
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Visitas"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
+
+                    <chart:SfChart.Series>
+                        <chart:ColumnSeries ItemsSource="{Binding Sector1Data}" Label="Visitas" XBindingPath="DateOfVisit" YBindingPath="VisitsAmount" EnableTooltip="True">
+                            <chart:ColumnSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:ColumnSeries.DataMarker>
+                        </chart:ColumnSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+                <chart:SfChart Grid.Row="2" x:Name="ChartSector2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                    <chart:SfChart.BindingContext>
+                        <vm:ChartsViewModel/>
+                    </chart:SfChart.BindingContext>
+
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
+
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Visitas ao setor de bolachas nos Últimos 3 dias"/>
+                    </chart:SfChart.Title>
+
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Setor"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
+
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Visitas"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
+
+                    <chart:SfChart.Series>
+                        <chart:ColumnSeries Color="Black" ItemsSource="{Binding Sector2Data}" Label="Visitas" XBindingPath="DateOfVisit" YBindingPath="VisitsAmount" EnableTooltip="True">
+                            <chart:ColumnSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:ColumnSeries.DataMarker>
+                        </chart:ColumnSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+                <chart:SfChart Grid.Row="3" x:Name="ChartSector3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                    <chart:SfChart.BindingContext>
+                        <vm:ChartsViewModel/>
+                    </chart:SfChart.BindingContext>
+
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend />
+                    </chart:SfChart.Legend>
+
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Visitas ao setor de higiene nos Últimos 3 dias"/>
+                    </chart:SfChart.Title>
+
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Setor"/>
+                            </chart:CategoryAxis.Title>
+                        </chart:CategoryAxis>
+                    </chart:SfChart.PrimaryAxis>
+
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Visitas"/>
+                            </chart:NumericalAxis.Title>
+                        </chart:NumericalAxis>
+                    </chart:SfChart.SecondaryAxis>
+
+                    <chart:SfChart.Series>
+                        <chart:ColumnSeries Color="DarkRed" ItemsSource="{Binding Sector3Data}" Label="Visitas" XBindingPath="DateOfVisit" YBindingPath="VisitsAmount" EnableTooltip="True">
+                            <chart:ColumnSeries.DataMarker>
+                                <chart:ChartDataMarker/>
+                            </chart:ColumnSeries.DataMarker>
+                        </chart:ColumnSeries>
+                    </chart:SfChart.Series>
+                </chart:SfChart>
+            </Grid>
+        </ScrollView>
+    </Grid>
 </ContentPage>

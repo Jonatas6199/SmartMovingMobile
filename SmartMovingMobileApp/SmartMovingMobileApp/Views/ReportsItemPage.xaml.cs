@@ -51,7 +51,6 @@ namespace SmartMovingMobileApp.Views
         {
             try
             {
-
                 string documentsPath = FileSystem.AppDataDirectory + "//Reports//";
                 string localFilename = "report.pdf";
                 string localPath = Path.Combine(documentsPath, localFilename);
@@ -69,7 +68,12 @@ namespace SmartMovingMobileApp.Views
         // Compartilhar relatório (TO DO)
         private async void btnShare_Clicked(object sender, EventArgs e)
         {
-            await ShareFile("text");
+            string documentsPath = FileSystem.AppDataDirectory + "//Reports//";
+            string localFilename = "report.pdf";
+            string localPath = Path.Combine(documentsPath, localFilename);
+            pdfViewerControl.Unload();
+            await ShareFile(localPath);
+            await Shell.Current.GoToAsync("..");
         }
         public async Task ShareFile(string text)
         {
@@ -79,6 +83,7 @@ namespace SmartMovingMobileApp.Views
                 File = shareFile,
                 Title = $"Compartilhar {shareFile.FileName}"
             });
+           
         }
         //Gráfico de barras horizontal ou de pizza (TO DO)
         //Total de visitas no período selecionado  (TO DO)

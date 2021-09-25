@@ -78,12 +78,13 @@ namespace SmartMovingMobileApp.ViewModels
                     Directory.CreateDirectory(documentsPath);
                 string localFilename = "report.pdf";
                 string localPath = Path.Combine(documentsPath, localFilename);
-                if (!File.Exists(localPath))
+                if (File.Exists(localPath))
                 {
-                    File.WriteAllBytes(localPath, bytes);
+                    File.Delete(localPath);
                 }
+                File.WriteAllBytes(localPath, bytes);
             });
-           
+
         }
 
     }
