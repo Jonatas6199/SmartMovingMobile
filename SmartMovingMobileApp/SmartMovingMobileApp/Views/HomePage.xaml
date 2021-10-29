@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SmartMovingMobileApp.Views.HomePage"
@@ -21,19 +21,19 @@
             <Label Margin="0,30,0,0" TextColor="Black" Text="Dados dos Últimos 3 dias" FontSize="20"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
                 
             </Label>
-            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="1" BackgroundColor="LightGray" Margin="50,30" >
+            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="1" BackgroundColor="#FFDE8C" Margin="50,30" >
                 <StackLayout>
-                    <Label TextColor="Black" Text="{Binding MostVisitedSection}" HorizontalOptions="CenterAndExpand"  />
+                    <Label TextColor="Black" FontSize="16" FontAttributes="Bold" Text="{Binding MostVisitedSection}" HorizontalOptions="CenterAndExpand"  />
                     <Image HeightRequest="100" WidthRequest="100" Margin="20" >
                         <Image.Source>
                             <UriImageSource Uri="{Binding MostVisitedSectionIcon}" />
                         </Image.Source>
                     </Image>
-                    <Label TextColor="Black" Text="{Binding DataModel.MostVisitedSection.AmountOfVisits}" HorizontalOptions="CenterAndExpand" />
+                    <Label TextColor="Black" FontSize="16" FontAttributes="Bold" Text="{Binding DataModel.MostVisitedSection.AmountOfVisits}" HorizontalOptions="CenterAndExpand" />
                 </StackLayout>
             </Frame>
 
-            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="2" BackgroundColor="LightGray" Margin="50,30" >
+            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="2" BackgroundColor="#FFDE8C" Margin="50,30" >
                 <StackLayout>
                     <Label TextColor="Black" Text="{Binding LessVisitedSection}" HorizontalOptions="CenterAndExpand"  />
                     <Image HeightRequest="100" WidthRequest="100" Margin="10" >
@@ -45,7 +45,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="3" BackgroundColor="LightGray" Margin="50,30" >
+            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="3" BackgroundColor="#FFDE8C" Margin="50,30" >
                 <StackLayout>
                     <Label TextColor="Black" Text="{Binding PeopleAverage}" HorizontalOptions="CenterAndExpand" />
                     <Image HeightRequest="100" WidthRequest="100" Margin="10" >
@@ -56,7 +56,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="4" BackgroundColor="LightGray" Margin="50,30" >
+            <Frame HasShadow="True" CornerRadius="20"  Grid.Row="4" BackgroundColor="#FFDE8C" Margin="50,30" >
                 <StackLayout>
                     <Label TextColor="Black" Text="{Binding TimeAverage}" HorizontalOptions="CenterAndExpand" />
                     <Image HeightRequest="100" WidthRequest="100" Margin="10" >

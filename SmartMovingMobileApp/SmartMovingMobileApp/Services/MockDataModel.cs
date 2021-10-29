@@ -26,7 +26,7 @@ namespace SmartMovingMobileApp.Services
                 {
                     AmountOfVisits = 230,
                     Name = "Vegetais",
-                    SectionIconPath = "https://down.imgspng.com/download/0720/broccoli_PNG72974.png"
+                    SectionIconPath = "https://cdn1.iconfinder.com/data/icons/vegetables-56/50/Vegetables_Outline-12-256.png"
                 },
                 LessVisitedSection = new Section
                 {
