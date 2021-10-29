@@ -15,7 +15,7 @@
             <ListView x:Name="listViewReports" ItemTapped="listViewReports_ItemTapped" ItemsSource="{Binding ReportsCollection}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" TextColor="Black" DetailColor="Aquamarine" />
+                        <TextCell Text="{Binding Name}" TextColor="Gray" DetailColor="Blue" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
