@@ -13,9 +13,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using Newtonsoft.Json;
 
 namespace SmartMovingMobileApp.ViewModels
 {
+    public class ReportAPI
+    {
+        public string message { get; set; }
+    }
     public class ReportsViewModel : BaseViewModel
     {
         // Lista dos relatórios para o Front
@@ -40,16 +45,17 @@ namespace SmartMovingMobileApp.ViewModels
             retorno.ForEach(r => ReportsCollection.Add(r));
         }
         // Buscar relatórios por Id na API
-        public async Task<Stream> GetReport(int reportId)
+        public async Task<byte[]> GetReport(int reportId)
         {
-            Stream report = await client.GetStreamAsync("https://gps-indoor.herokuapp.com/report");
-            return report;
+            string report = await client.GetStringAsync("https://gps-indoor.herokuapp.com/report");
+            ReportAPI result = JsonConvert.DeserializeObject<ReportAPI>(report);
+            var bytes = Convert.FromBase64String(result.message);
+            return bytes;
         }
         // Salva o relatório no diretório
         private async Task SaveFile(int id)
         {
-            Stream stream = await GetReport(id);
-            byte[] bytes = await ConvertStreamToByteArray(stream);
+            byte[] bytes = await GetReport(id);
             await WriteFile(bytes);
         }
         public static Task<byte[]> ConvertStreamToByteArray(Stream stream)

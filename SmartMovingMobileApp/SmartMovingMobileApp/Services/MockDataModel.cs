@@ -24,24 +24,24 @@ namespace SmartMovingMobileApp.Services
             {
                 MostVisitedSection = new Section
                 {
-                    AmountOfVisits = 230,
-                    Name = "Vegetais",
-                    SectionIconPath = "https://cdn1.iconfinder.com/data/icons/vegetables-56/50/Vegetables_Outline-12-256.png"
+                    AmountOfVisits = 219,
+                    Name = "Hortifruti",
+                    SectionIconPath = "https://cdn2.iconfinder.com/data/icons/fruits-and-vegetables-silhouette/100/_1____-40-256.png"
                 },
                 LessVisitedSection = new Section
                 {
-                    AmountOfVisits = 22,
-                    Name = "Higiene",
-                    SectionIconPath = "https://images.vexels.com/media/users/3/207151/isolated/lists/39f024691f9389afc9f45cde9756bfd2-icone-de-sabonete-liquido-de-mao.png"
+                    AmountOfVisits = 168,
+                    Name = "Bebidas",
+                    SectionIconPath = "https://cdn4.iconfinder.com/data/icons/essential-app-1/16/wine-drink-alcohol-celebrate-256.png"
                 },
                 PeopleAverage = new PeopleAverage
                 {
-                    PeopleAverageAmount = 290,
+                    PeopleAverageAmount = 74,
                     PeopleAverageIconPath = "https://cdn3.iconfinder.com/data/icons/digital-marketing-27/64/Human-people-teamwork-graph-analysis-man-256.png"
                 },
                 TimeAverage = new TimeAverage
                 {
-                    TimeAverageAmount = 67,
+                    TimeAverageAmount = 50,
                     TimeAverageIconPath = "https://cdn4.iconfinder.com/data/icons/essential-app-2/16/stop-watch-time-count-256.png"
                 }
             };

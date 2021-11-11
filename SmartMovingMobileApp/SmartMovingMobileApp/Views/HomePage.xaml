@@ -18,9 +18,31 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Margin="0,30,0,0" TextColor="Black" Text="Dados dos Últimos 3 dias" FontSize="20"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                
-            </Label>
+           
+            <Grid Margin="50,20,50,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button  BackgroundColor="#FFDE8C" Margin="1" CornerRadius="20" Text="24H" Grid.Column="0">
+                    
+                </Button>
+
+                <Button BackgroundColor="#5271FF" Margin="1" CornerRadius="20" Text="7D" Grid.Column="1">
+
+                </Button>
+
+                <Button  BackgroundColor="#FFDE8C" Margin="1" CornerRadius="20" Text="15D" Grid.Column="2">
+
+                </Button>
+
+                <Button  BackgroundColor="#FFDE8C" Margin="1" CornerRadius="20" Text="30D" Grid.Column="3">
+
+                </Button>
+            </Grid>
             <Frame HasShadow="True" CornerRadius="20"  Grid.Row="1" BackgroundColor="#FFDE8C" Margin="50,30" >
                 <StackLayout>
                     <Label TextColor="Black" FontSize="16" FontAttributes="Bold" Text="{Binding MostVisitedSection}" HorizontalOptions="CenterAndExpand"  />

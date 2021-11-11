@@ -23,7 +23,7 @@ namespace SmartMovingMobileApp.ViewModels
             GetData();
             MostVisitedSection = "Setor Mais Visitado: " + DataModel.MostVisitedSection.Name;
             LessVisitedSection = "Setor Menos Visitado: " + DataModel.LessVisitedSection.Name;
-            PeopleAverage = "Média de Pessoas: " + DataModel.PeopleAverage.PeopleAverageAmount;
+            PeopleAverage = "Média de Visitas: " + DataModel.PeopleAverage.PeopleAverageAmount;
             TimeAverage = "Tempo de Permanência Médio: " + DataModel.TimeAverage.TimeAverageAmount + " minutos";
 
             MostVisitedSectionIcon = new Uri(DataModel.MostVisitedSection.SectionIconPath);

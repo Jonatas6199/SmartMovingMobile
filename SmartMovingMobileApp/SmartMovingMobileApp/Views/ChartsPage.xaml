@@ -24,7 +24,7 @@
                     </chart:SfChart.Legend>
 
                     <chart:SfChart.Title>
-                        <chart:ChartTitle Text="Visitas por Setor nos últimos 3 dias"/>
+                        <chart:ChartTitle Text="Visitas por Setor nos últimos 7 dias"/>
                     </chart:SfChart.Title>
 
                     <chart:SfChart.PrimaryAxis>
@@ -63,7 +63,7 @@
                     </chart:SfChart.Legend>
 
                     <chart:SfChart.Title>
-                        <chart:ChartTitle Text="Visitas aos Vegetais nos Últimos 3 dias"/>
+                        <chart:ChartTitle Text="Visitas ao Hortifruti nos Últimos 7 dias"/>
                     </chart:SfChart.Title>
 
                     <chart:SfChart.PrimaryAxis>
@@ -101,7 +101,7 @@
                     </chart:SfChart.Legend>
 
                     <chart:SfChart.Title>
-                        <chart:ChartTitle Text="Visitas ao setor de bolachas nos Últimos 3 dias"/>
+                        <chart:ChartTitle Text="Visitas ao setor de bebidas nos Últimos 7 dias"/>
                     </chart:SfChart.Title>
 
                     <chart:SfChart.PrimaryAxis>
@@ -139,7 +139,7 @@
                     </chart:SfChart.Legend>
 
                     <chart:SfChart.Title>
-                        <chart:ChartTitle Text="Visitas ao setor de higiene nos Últimos 3 dias"/>
+                        <chart:ChartTitle Text="Visitas ao setor de frios nos Últimos 7 dias"/>
                     </chart:SfChart.Title>
 
                     <chart:SfChart.PrimaryAxis>

@@ -25,45 +25,71 @@ namespace SmartMovingMobileApp.ViewModels
             {
                 new ChartDataModel
                 {
-                    Name = "Vegetais",
-                    Amount = 230
+                    Name = "Hortifruti",
+                    Amount = 219
                 },
                 new ChartDataModel
                 {
-                    Name = "Bolachas",
-                    Amount = 125
+                    Name = "Frios",
+                    Amount = 185
                 },
                 new ChartDataModel
                 {
-                    Name = "Higiene",
-                    Amount = 22
+                    Name = "Bebidas",
+                    Amount = 168
                 }
             };
         }
         private List<SectorChartDataModel> sector1Data()
         {
             DateTime today = DateTime.Today;
-            DateTime yesterday = today.AddDays(-1);
-            DateTime beforeYesterday = today.AddDays(-2);
             return new List<SectorChartDataModel>
             {
                 new SectorChartDataModel
                 {
-                    Name = "Vegetais",
-                    DateOfVisit = today,
-                    VisitsAmount = 80
+                    Name = "Hortifruti",
+                    DateOfVisit = today.AddDays(-6),
+                    VisitsAmount = 28
                 },
                 new SectorChartDataModel
                 {
-                    Name = "Vegetais",
-                    DateOfVisit = yesterday,
-                    VisitsAmount = 110
-                },
+                    Name = "Hortifruti",
+                    DateOfVisit = today.AddDays(-5),
+                    VisitsAmount = 29
+                }
+                ,
                 new SectorChartDataModel
                 {
-                    Name = "Vegetais",
-                    DateOfVisit = beforeYesterday,
+                    Name = "Hortifruti",
+                    DateOfVisit = today.AddDays(-4),
+                    VisitsAmount = 12
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Hortifruti",
+                    DateOfVisit = today.AddDays(-3),
                     VisitsAmount = 40
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Hortifruti",
+                    DateOfVisit = today.AddDays(-2),
+                    VisitsAmount = 33
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Hortifruti",
+                    DateOfVisit = today.AddDays(-1),
+                    VisitsAmount = 45
+                },
+                  new SectorChartDataModel
+                {
+                    Name = "Hortifruti",
+                    DateOfVisit = today,
+                    VisitsAmount = 32
                 }
             };
         }
