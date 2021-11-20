@@ -102,21 +102,49 @@ namespace SmartMovingMobileApp.ViewModels
             {
                 new SectorChartDataModel
                 {
-                    Name = "Bolachas",
+                    Name = "Bebidas",
+                    DateOfVisit = today.AddDays(-6),
+                    VisitsAmount = 19
+                },
+                new SectorChartDataModel
+                {
+                    Name = "Bebidas",
+                    DateOfVisit = today.AddDays(-5),
+                    VisitsAmount = 18
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Bebidas",
+                    DateOfVisit = today.AddDays(-4),
+                    VisitsAmount = 17
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Bebidas",
+                    DateOfVisit = today.AddDays(-3),
+                    VisitsAmount = 16
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Bebidas",
+                    DateOfVisit = today.AddDays(-2),
+                    VisitsAmount = 31
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Bebidas",
+                    DateOfVisit = today.AddDays(-1),
+                    VisitsAmount = 27
+                },
+                  new SectorChartDataModel
+                {
+                    Name = "Bebidas",
                     DateOfVisit = today,
-                    VisitsAmount = 20
-                },
-                new SectorChartDataModel
-                {
-                    Name = "Bolachas",
-                    DateOfVisit = yesterday,
                     VisitsAmount = 40
-                },
-                new SectorChartDataModel
-                {
-                    Name = "Bolachas",
-                    DateOfVisit = beforeYesterday,
-                    VisitsAmount = 65
                 }
             };
         }
@@ -129,21 +157,49 @@ namespace SmartMovingMobileApp.ViewModels
             {
                 new SectorChartDataModel
                 {
-                    Name = "Higiene",
+                    Name = "Hortifruti",
+                    DateOfVisit = today.AddDays(-6),
+                    VisitsAmount = 12
+                },
+                new SectorChartDataModel
+                {
+                    Name = "Frios",
+                    DateOfVisit = today.AddDays(-5),
+                    VisitsAmount = 24
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Frios",
+                    DateOfVisit = today.AddDays(-4),
+                    VisitsAmount = 32
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Frios",
+                    DateOfVisit = today.AddDays(-3),
+                    VisitsAmount = 31
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Frios",
+                    DateOfVisit = today.AddDays(-2),
+                    VisitsAmount = 29
+                }
+                ,
+                new SectorChartDataModel
+                {
+                    Name = "Frios",
+                    DateOfVisit = today.AddDays(-1),
+                    VisitsAmount = 35
+                },
+                  new SectorChartDataModel
+                {
+                    Name = "Frios",
                     DateOfVisit = today,
-                    VisitsAmount = 2
-                },
-                new SectorChartDataModel
-                {
-                    Name = "Higiene",
-                    DateOfVisit = yesterday,
-                    VisitsAmount = 7
-                },
-                new SectorChartDataModel
-                {
-                    Name = "Higiene",
-                    DateOfVisit = beforeYesterday,
-                    VisitsAmount = 13
+                    VisitsAmount = 22
                 }
             };
         }
